@@ -1,0 +1,293 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+                            
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+    \textheight=700px                    % Saving trees ;-)
+%\usepackage{url}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{doi}
+
+
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%                      % Change font of \section command
+    \usefont{OT1}{phv}{b}{n}%       % bch-b-n: CharterBT-Bold font
+    \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}          % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}       % Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+        \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+        \par \normalsize \normalfont}
+        
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+        \par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value    
+        
+\newcommand{\EducationEntry}[4]{
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par  % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+\newcommand{\WorkEntry}[4]{               % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%   \vspace*{-2em}
+%       \includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Riinu Ots}
+\MySlogan{Publications}
+\MySlogan{May 2018}
+
+\sepspace
+
+
+
+%%% Personal details
+%%% ------------------------------------------------------------
+%\NewPart{Contact details}{}
+
+%\PersonalEntry{Email}{riinu.ots@gmail.com}
+%\PersonalEntry{Address}{4/5 Grange Loan, Edinburgh EH9 2NR}
+%\PersonalEntry{Mobile}{077 838 00 631}
+
+
+%\renewcommand{\refname}{JOURNAL PAPERS UNDER REVIEW} 
+%\nocite{*}
+%\bibliographystyle{plainnat}
+%\bibliography{riinu.bib}
+%\begin{thebibliography}{3}
+%\providecommand{\natexlab}[1]{#1}
+%\providecommand{\url}[1]{\texttt{#1}}
+%\expandafter\ifx\csname urlstyle\endcsname\relax
+ % \providecommand{\doi}[1]{doi: #1}\else
+  %\providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+  
+  
+
+
+%\end{thebibliography}
+
+
+
+\renewcommand{\refname}{JOURNAL PAPERS} 
+%\nocite{*}
+%\bibliographystyle{plainnat}
+%\bibliography{riinu.bib}
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+  
+  
+\bibitem[Ots et~al.(2018)]{ots2018}
+\textbf{Ots} \textbf{R.}, Heal, M. R., Young, D. E., Williams, L. R., Allan, J. D., Nemitz, E., Di Marco, C., Detournay, A., Xu, L., Ng, N. L., Coe, H., Herndon, S. C., Mackenzie, I. A., Green, D. C., Kuenen, J. J. P., Reis, S., and Vieno, M.: Modelling carbonaceous aerosol from residential solid fuel burning with different assumptions for emissions,
+\emph{Atmospheric Chemistry and Physics}, 
+\doi{10.5194/acp-2017-568}, 18: 4497--4518, 2018.
+ 
+ \bibitem[GlobalSurg Collaborative (2017)]{globalsurg2018}
+GlobalSurg Collaborative: Surgical site infection after gastrointestinal surgery in high-income, middle-income, and low-income countries: a prospective, international, multicentre cohort study,
+ \emph{The Lancet Infectious Diseases}, 
+ \doi{10.1016/S1473-3099(18)30101-4}, 18: 516--525, 2018.
+ 
+\bibitem[McLean et~al.(2017)]{mclean2017}
+McLean, K. A., Camilleri-Brennan, J., Knight, S. R., Drake, T. M., \textbf{Ots} \textbf{R.},  Shaw, C. A., Wigmore, S. J. and Harrison, E. M.: Decision modeling in donation after circulatory death liver transplantation.,
+\emph{ Liver Transplantation}, 23: 594--603
+\doi{10.1002/lt.24715}, 2017.
+
+  
+\bibitem[Ots et~al.(2016)a]{ots2016a}
+\textbf{Ots} \textbf{R.}, Vieno, M., Allan, J.~D., Reis, S., Nemitz, E., Young,
+D.~E., Coe, H., Di~Marco, C., Detournay, A., Mackenzie, I.~A., Green, D.~C.,
+and Heal, M.~R.: Model simulations of cooking organic aerosol (COA) over the
+UK using estimates of emissions based on measurements at two sites in London,
+\emph{Atmospheric Chemistry and Physics}, 16: 13\,773--13\,789,
+\doi{10.5194/acp-16-13773-2016},
+2016.
+
+\bibitem[Ots et~al.(2016)b]{ots2016b}
+\textbf{Ots} \textbf{R.}, Young, D.~E., Vieno, M., Xu, L., Dunmore, R.~E., Allan,
+J.~D., Coe, H., Williams, L.~R., Herndon, S.~C., Ng, N.~L., Hamilton, J.~F.,
+Bergstr\"{o}m, R., Di~Marco, C., Nemitz, E., Mackenzie, I.~A., Kuenen, J.
+J.~P., Green, D.~C., Reis, S., and Heal, M.~R.: Simulating secondary organic
+aerosol from missing diesel-related intermediate-volatility organic compound
+emissions during the Clean Air for London~{(ClearfLo)} campaign, Atmos. Chem.
+Phys., 16: 6453--6473, \doi{10.5194/acp-16-6453-2016},
+2016.
+
+
+\bibitem[Toll et~al.(2015)]{toll_silam_2015}
+V.~Toll, K.~Reis, \textbf{Ots} \textbf{R.},  M.~Kaasik, A.~Männik, M.~Prank,
+and M.~Sofiev.
+\newblock {SILAM} and {MACC} reanalysis aerosol data used for simulating the
+aerosol direct radiative effect with the {NWP} model {HARMONIE} for summer
+2010 wildfire case in {Russia}.
+\newblock \emph{Atmospheric Environment}, 121: 75--85,
+\newblock \doi{10.1016/j.atmosenv.2015.06.007},  2015.
+
+
+
+\bibitem[Vieno et~al.(2015) . ]{vieno_2015}
+M. Vieno, M.~R. Heal, M. Twigg, I. A. Mackenzie, C.~F. Braban, J. Lingard, S. Ritchie, R. Beck, A. Móring, \textbf{Ots} \textbf{R.},  C. Di Marco, E. Nemitz, M. Sutton, and S. Reis.
+\newblock The UK particulate matter air pollution episode of March–April 2014: more than Saharan dust.
+\newblock \emph{Environmental Research Letters}, 11(4): 44004, \doi{10.1088/1748-9326/11/4/044004}, 2015.
+
+\bibitem[Loot et~al.(2012)Loot, \textbf{Ots}, Kaasik, and
+Iher]{loot_atmospheric_2012}
+A.~Loot, \textbf{Ots} \textbf{R.},  M.~Kaasik, and H.~Iher.
+\newblock Atmospheric transport model applied to understand the effect of
+biogenic emissions to secondary atmospheric aerosol in hemiboreal zone.
+\newblock \emph{International Journal of Environment and Pollution},
+50(1-4): 342--350, 
+\newblock \doi{10.1504/IJEP.2012.051205}, 2012.
+
+\bibitem[Pavlenkova et~al.(2011)Pavlenkova, Kaasik, Kerner, Loot, and
+  \textbf{Ots}]{pavlenkova_impact_2011}
+J.~Pavlenkova, M.~Kaasik, E.-S. Kerner, A.~Loot, and \textbf{Ots} \textbf{R.}.
+\newblock The {Impact} of {Meteorological} {Parameters} on {Sulphuric} {Air}
+  {Pollution} in {Kohtla}-{Järve}.
+\newblock \emph{Oil Shale}, 28(2): 337--352,
+\newblock \doi{10.3176/oil.2011.2.07} , 2011.
+
+\bibitem[Kaasik et~al.(2008)Kaasik, Ploompuu, \textbf{Ots}, Meier, Ohvril,
+  Okulov, Teral, Neiman, Russak, Kallis, and Post]{kaasik_growth_2008}
+M.~Kaasik, T.~Ploompuu, \textbf{Ots} \textbf{R.}, E.~Meier, H.~Ohvril,
+  O.~Okulov, H.~Teral, L.~Neiman, V.~Russak, A.~Kallis, and P.~Post.
+\newblock Growth {Acceleration} of {Pinus} {Sylvestris} in {Bog} {Stands} {Due}
+  to {Intensified} {Nutrient} {Influx} from the {Atmosphere}.
+\newblock \emph{Oil Shale}, 25(1): 75--93,
+\newblock \doi{10.3176/oil.2008.1.08}, 2008.
+
+\end{thebibliography}
+
+
+
+\renewcommand{\refname}{CONFERENCE PROCEEDINGS} 
+%\nocite{*}
+%\bibliographystyle{plainnat}
+%\bibliography{riinu_conf.bib}
+
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+  
+  
+\bibitem[\textbf{Ots} et~al.(2014{\natexlab{a}})\textbf{Ots}, Dore, Tang,
+  Braban, Vieno, and Sutton]{ots_modelling_2014}
+\textbf{R.} \textbf{Ots}, A.~Dore, Y.~S. Tang, C.~F. Braban, M.~Vieno, and
+  M.~Sutton.
+\newblock Modelling {Past} and {Future} {Changes} in {Secondary} {Inorganic}
+  {Aerosol} {Concentrations} in the {UK}.
+\newblock In D.~G. ~Steyn and R.~Mathur, editors, \emph{Air {Pollution} {Modeling}
+  and its {Application} {XXIII}}, Springer {Proceedings} in {Complexity}, pages
+  179--182. Springer International Publishing, 
+\newblock \doi{10.1007/978-3-319-04379-1\_29}, 2014.
+
+\bibitem[\textbf{Ots} et~al.(2014{\natexlab{b}})\textbf{Ots}, Loot, and
+  Kaasik]{ots_scale-dependent_2014}
+\textbf{R.} \textbf{Ots}, A.~Loot, and M.~Kaasik.
+\newblock Scale-{Dependent} and {Seasonal} {Performance} of {SILAM} {Model} in
+  {Estonia}.
+\newblock In D.~G. Steyn, P.~J.~H. Builtjes, and R.~M.~A. Timmermans,
+  editors, \emph{Air {Pollution} {Modeling} and its {Application} {XXII}},
+  {NATO} {Science} for {Peace} and {Security} {Series} {C}: {Environmental}
+  {Security}, pages 593--597. Springer Netherlands,
+\newblock \doi{10.1007/978-94-007-5577-2\_100},  2013.
+
+
+
+\bibitem[\textbf{Ots} et~al.(2011)\textbf{Ots}, Loot, and
+  Kaasik]{ots_wintertime_2011}
+\textbf{R.} \textbf{Ots}, A.~Loot, and M.~Kaasik.
+\newblock A {Wintertime} {Local}-to-{Regional} {Scale} {Test} {Case} {Study} of
+  {SILAM} {Model}.
+\newblock In D.~G. Steyn and S.~T. Castelli, editors, \emph{Air {Pollution}
+  {Modeling} and its {Application} {XXI}}, {NATO} {Science} for {Peace} and
+  {Security} {Series} {C}: {Environmental} {Security}, pages 539--542. Springer
+  Netherlands, 
+\newblock \doi{10.1007/978-94-007-1359-8\_90}, 2011.
+
+
+
+\end{thebibliography}
+
+
+
+
+
+
+
+\end{document}

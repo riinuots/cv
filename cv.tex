@@ -1,0 +1,234 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+                            
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+    \textheight=700px                    % Saving trees ;-)
+%\usepackage{url}
+\usepackage{hyperref}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%                      % Change font of \section command
+    \usefont{OT1}{phv}{b}{n}%       % bch-b-n: CharterBT-Bold font
+    \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}          % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}       % Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+        \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+        \par \normalsize \normalfont}
+        
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+        \par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value    
+        
+\newcommand{\EducationEntry}[4]{
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par  % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+\newcommand{\WorkEntry}[4]{               % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%   \vspace*{-2em}
+%       \includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Riinu Ots}
+\MySlogan{Curriculum Vitae}
+\MySlogan{May 2018}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Email}{R.Ots@ed.ac.uk}
+%\PersonalEntry{Address}{11/Flat 1 Warriston Road, Edinburgh, UK}
+%\PersonalEntry{Mobile}{077 838 00 631}
+\PersonalEntry{Website}{\url{https://riinu.me/}}
+\PersonalEntry{Presentations}{\url{https://speakerdeck.com/riinuots/}}
+\PersonalEntry{GitHub}{\url{https://github.com/riinuots/}}
+
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{PhD Environmental Chemistry}{2012 - 2016}{University of Edinburgh}{Thesis: ``High resolution modelling of particulate matter air quality over the UK''
+
+Supervisors: Dr. Mathew R. Heal, Dr. Massimo Vieno, Dr. Stefan Reis}
+\sepspace
+
+\EducationEntry{BSc Physics (First class equivalent)}{2009 - 2012}{University of Tartu}{}
+\sepspace
+
+
+
+
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work and teaching experience}{}
+
+\EducationEntry{Data Manager}{2016 - current}{Clinical Surgery, Deanery of Health Sciences, University of Edinburgh}{}
+
+\EducationEntry{Demonstrator and tutor}{2013 - 2016}{School of Geosciences, University of Edinburgh}{}{}
+
+
+\EducationEntry{Specialist in numerical modelling (Part-time: 0.1)}{2012 - 2015}{Laboratory of Atmospheric Physics, University of Tartu}{}
+
+
+
+\EducationEntry{Lab assistant in numerical modellin (Part-time: 0.4)}{2012 - 2015}{Laboratory of Atmospheric Physics, University of Tartu}{}
+
+
+
+
+
+\EducationEntry{Intern in air quality modelling}{Aug-Oct 2011}{NERC Centre for Ecology\&Hydrology, Edinburgh}{}
+
+\EducationEntry{Field Biologist}{Jun-Aug 2010}{Estonian Fund for Nature, Estonia}{}{}
+
+
+\clearpage
+
+%%% International awards
+%%% ------------------------------------------------------------
+\NewPart{Grants and Awards}{}
+
+
+\EducationEntry{Principal's Teaching Award Scheme}{2017}{University of Edinburgh: For further development of \url{www.shinystats.org}}{£5,000}
+
+
+\EducationEntry{Estonian Students Fund in USA}{2013}{PhD travel bursary}{\$3,000}
+
+
+\sepspace
+
+\EducationEntry{Estonian Students Fund in USA}{2013}{PhD travel bursary}{\$2,000}
+
+
+\sepspace
+
+\EducationEntry{PhD stipend}{2012-2016}{NERC-CEH fully funded studentship}{£60,000}
+
+\sepspace
+
+\EducationEntry{III award - Young researchers}{2012}{32nd NATO/SPS International Technical Meeting on Air Pollution Modelling and its Application, Work: ``Scale-dependent and seasonal performance of SILAM model in Estonia''}{\$350}
+\sepspace
+
+\EducationEntry{II award in Environmental Sciences}{2009}{Intel International Science and Engineering Fair, Work: ``Implementation of Thermal Plume Rise in SILAM Atmospheric Dispersion Model'': }{\$1,500
+	
+	 \textbf{The award included the naming of an asteroid after me: 25616\_Riinuots.}}
+
+
+\NewPart{Reviewing}{}
+
+
+\EducationEntry{Grant proposals: Cancer Innovation Challenge}{2017- ...}{Organiser: The Data Lab}{}{}
+
+
+\EducationEntry{Peer-review}{2016}{Journal: Palgrave Communications}{}{}
+
+\EducationEntry{Peer-review}{2016}{Journal: Environmental Pollution}{}{}
+
+\EducationEntry{Students' Research Projects Competition}{2012 - 2014}{Organiser: Estonian Research Council}{}{}
+
+
+
+\NewPart{Presentations at international conferences}{}
+
+\EducationEntry{Plenary presentation}{2017 \\ New York, US}{``Reporting Apps''}{REDCapCon - Research Electronic Data Capture conference}
+
+
+
+\EducationEntry{Poster presentation}{2017 \\ Helsinki,\\ Finland}{``ShinyStats: A new, interactive and engaging way to tutor trainee surgeons in statistics"}{Association for Medical Education in Europe (AMEE) conference}
+
+\EducationEntry{Demonstration}{2017 \\ Manchester, UK}{``HealthyR: R for healthcare data analysis"}{Informatics for Health}
+
+\EducationEntry{Oral presentation}{2015 \\ Montpellier, France}{``Model-measurement comparisons of speciated primary and secondary organic aerosol in London''}{34th International Technical Meeting on Air Pollution Modelling and its Application}
+%\sepspace
+
+\EducationEntry{Poster presentation}{2013 \\ Miami, US}{``Modelling Past and Future Changes in Secondary Inorganic Aerosol Concentrations in the UK.''}{33rd NATO/SPS International Technical Meeting on Air Pollution Modelling and its Application}
+%\sepspace
+
+
+\EducationEntry{Poster presentation}{2012 \\ Utrecht, Netherlands}{``Scale-Dependent and Seasonal Performance of SILAM Model in Estonia''}{32nd NATO/SPS International Technical Meeting on Air Pollution Modelling and its Application}
+%\sepspace
+
+\EducationEntry{Oral presentation}{2011 \\ Kos, Greece}{``Atmospheric transport model applied to understand the effect of biogenic emissions to secondary atmospheric aerosol in hemiboreal zone.''}{11th conference on Harmonisation within Atmospheric Dispersion Modelling for Regulatory Purposes, Kos, Greece}
+%\sepspace
+
+\EducationEntry{Poster presentation}{2010 \\ Turin, Italy}{``A Wintertime Local-to-Regional Scale Test Case Study of SILAM Model''}{31st NATO/SPS International Technical Meeting on Air Pollution Modelling and its Application}
+%\sepspace
+
+
+
+\end{document}
